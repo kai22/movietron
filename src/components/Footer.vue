@@ -10,9 +10,7 @@
 <script>
   export default {
     name: 'AppFooter',
-    props:{
-        footerText: String
-    }
+    props: ['footerText']
   }
 </script>
 

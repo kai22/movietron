@@ -17,7 +17,7 @@
 
   export default {
     name: 'SearchForm',
-    props:['inputs'],
+    props: ['inputs'],
     components:{
       CustomInput
     }

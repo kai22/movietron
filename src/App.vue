@@ -1,18 +1,13 @@
 <template>
-
   <AppHeader v-bind:title="title" v-bind:subtitle="subtitle"/>
-
   <!-- Search by title with optional year-->
   <SearchForm v-bind:inputs="inputs"  @submit.prevent="handleSubmit" />
   
   <FilmStrip /> <!-- just a visual element --> 
   
-
   <div class="contentWrapper">
-    
     <!-- Loading div  --> 
     <div v-if="loading" class="loading"> &circlearrowright; </div>
-    
     <!-- Error div  --> 
     <div v-if="errorMessage" class="error">
       <div class="error-message">
@@ -20,11 +15,9 @@
         {{errorMessage}}
       </div>
     </div>
-
     <!-- Search Results -->
     <SearchResults v-if="searchResult" v-bind:results="searchResult"/>
-   
- </div>
+  </div>
 
   <FilmStrip /> <!-- just a visual element --> 
 
@@ -32,6 +25,7 @@
 </template>
 
 <script>
+
 import FilmStrip from './components/FilmStrip.vue'
 import AppHeader from './components/Header.vue'
 import AppFooter from './components/Footer.vue'
@@ -76,14 +70,14 @@ export default {
       }
    }
   },
-  components: {
+  components:{
     FilmStrip,
     AppHeader,
     SearchForm,
     SearchResults,
     AppFooter
   },
-  methods: {
+  methods:{
     fetchData(url){
       return fetch(url, {
         method: 'get',

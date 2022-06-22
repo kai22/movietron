@@ -16,7 +16,7 @@
 <script>
   export default {
     name: 'SearchResults',
-    props:['results']
+    props: ['results']
   }
 </script>
 
