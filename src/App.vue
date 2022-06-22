@@ -132,7 +132,7 @@ export default {
     omdbSearch(t,y) {
       this.loading = true;
 
-      let key = 'eee0805f';
+      let key = process.env.VUE_APP_OMDB_SEARCH_KEY;
       let title = t;
       let year = y;
       let url = `http://www.omdbapi.com/?apikey=${key}&t=${title}&y=${year}`;
